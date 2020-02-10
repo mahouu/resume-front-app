@@ -26,7 +26,7 @@ class App extends Component {
             })
             .catch(console.log);
 
-        fetch('http://localhost:8081/resume')
+        fetch('http://localhost:8081/education/EN')
             .then(res => res.json())
             .then((data) => {
                 this.setState({ education: data })
