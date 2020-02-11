@@ -9,11 +9,11 @@ const Education = ({education}) => {
         for (const [value] of education.educationInfo.entries()) {
             items.push(<div className="card">
                     <div className="card-body">
-                        <h5 className="card-title">Language: {education.educationInfo[value].language}</h5>
-                        <h5 className="card-title">Date: {education.educationInfo[value].date}</h5>
-                        <h5 className="card-title">Title: {education.educationInfo[value].title}</h5>
-                        <h5 className="card-title">SubTitle: {education.educationInfo[value].subTitle}</h5>
-                        <h5 className="card-title">Description: {education.educationInfo[value].description}</h5></div></div>);
+                        <h5 className="card-title">Language: {education.educationInfo[value].languageView}</h5>
+                        <h5 className="card-title">Date: {education.educationInfo[value].dateView}</h5>
+                        <h5 className="card-title">Title: {education.educationInfo[value].titleView}</h5>
+                        <h5 className="card-title">SubTitle: {education.educationInfo[value].subTitleView}</h5>
+                        <h5 className="card-title">Description: {education.educationInfo[value].descriptionView}</h5></div></div>);
         }
         return (<div><center><h1>Education</h1></center> 
             {items}
