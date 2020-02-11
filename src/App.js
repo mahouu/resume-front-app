@@ -19,7 +19,7 @@ class App extends Component {
 
 
     componentDidMount() {
-        fetch('http://localhost:8081/resume')
+        fetch('http://localhost:8081/contactInfo')
             .then(res => res.json())
             .then((data) => {
                 this.setState({ contacts: data })
