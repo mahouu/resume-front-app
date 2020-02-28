@@ -10,11 +10,11 @@ const Contacts = ({contacts}) => {
             </div>
             
             <span class="location">
-                <span class="address">Calle Segovia 5,</span> 
-                <span class="postalCode">28100,</span> 
-                <span class="city">Alcobendas,</span> 
-                <span class="region">Madrid</span> 
-                <span class="countryCode">ES</span> 
+                <span class="address">{contacts.contactInfoView.locationView.addressView},</span> 
+                <span class="postalCode">{contacts.contactInfoView.locationView.postalCodeView},</span> 
+                <span class="city">{contacts.contactInfoView.locationView.cityView},</span> 
+                <span class="region">{contacts.contactInfoView.locationView.regionView},</span> 
+                <span class="countryCode">{contacts.contactInfoView.locationView.countryCodeView}</span> 
             </span>
 <div id="contact">
                 <div class="website">
@@ -55,23 +55,6 @@ const Contacts = ({contacts}) => {
                     </div>
                 </div>
             </div>
-
-<div>
-            <center><h1>Contact List</h1></center>
-            
-                <div className="card">
-                    <div className="card-body">
-                        <h5 className="card-title">Name: {contacts.contactInfoView.nameView}</h5>
-                        <h5 className="card-title">Email: {contacts.contactInfoView.emailView}</h5>
-                        <h5 className="card-title">Surname: {contacts.contactInfoView.surnameView}</h5>
-                        <h5 className="card-title">Git URL: {contacts.contactInfoView.gitUrlView}</h5>
-                        <h5 className="card-title">Sonar URL:{contacts.contactInfoView.sonarUrlView}</h5>
-                        <h5 className="card-title">Phone number: {contacts.contactInfoView.phoneNumberView}</h5>
-                        <h5 className="card-title">Resume URL: {contacts.contactInfoView.resumeOnlineUrlView}</h5>
-                    </div>
-                </div>
-            
-        </div>
             
         </header>
         

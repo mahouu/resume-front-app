@@ -17,71 +17,18 @@ class App extends Component {
 </head>
   <body class=" __plain_text_READY__">
   
+
   <div id="resume">
-        <header id="header" class="clear">
-            <div>
-                <h1 class="name">Mauricio Miralles</h1>
-                <h2 class="label">Software developer</h2>
-            </div>
-            
-            <span class="location">
-                <span class="address">Calle Segovia 5,</span> 
-                <span class="postalCode">28100,</span> 
-                <span class="city">Alcobendas,</span> 
-                <span class="region">Madrid</span> 
-                <span class="countryCode">ES</span> 
-            </span>
-            
-    
-            <div id="contact">
-                <div class="website">
-                    <span class="fa fa-external-link"></span>
-                    <a target="_blank" href="http://mauriciomiralles.es/">http://mauriciomiralles.es</a>
-                </div>
-                <div class="email">
-                    <span class="fa fa-envelope-o"></span>
-                    <a href="mailto:mauricio.miralles@gmail.com">mauricio.miralles@gmail.com</a>
-                </div>
-                <div class="phone">
-                    <span class="fa fa-mobile"></span>
-                    <a href="tel:(0034) 607367423">(0034) 607367423</a>
-                </div>
-            </div>
-    
-            <div id="profiles">
-                <div class="item">
-                    <div class="username">
-                        <span class="fa fa-twitter twitter social"></span>
-                        <span>mahouu</span>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="username">
-                        <span class="fa fa-github github social"></span>
-                        <span class="url">
-                            <a target="_blank" href="https://github.com/mahouu">mahouu</a>
-                        </span> 
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="username">
-                        <span class="fa fa-instagram instagram social"></span>
-                        <span class="url">
-                            <a target="_blank" href="https://www.instagram.com/mahouu/">mahouu</a>
-                        </span> 
-                    </div>
-                </div>
-            </div>
-        </header>
-    
-        <section class="section main-summary">
+  <div class="skills">
+               <Contacts contacts={this.state.contacts} />
+  </div>
+           <section class="section main-summary">
             <section>
                 <div><p>Mauricio hails from Barcelona. He has earned degrees from the University of Garben. Before starting working at Lastminute, he worked for Yell pages as a full time software developer. </p></div>
             </section>
         </section>
     <div>
-             <Contacts contacts={this.state.contacts} />
-             <Education education={this.state.education} />
+             
             </div>
     <section class="section margin1">
         <header>
@@ -158,6 +105,7 @@ class App extends Component {
       <section id="education">
         <section class="education-item">
           <header>
+          <Education education={this.state.education} />
             <div class="header-left">
               <div class="studyType">
                 Bachelor
