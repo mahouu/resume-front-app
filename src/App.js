@@ -329,14 +329,14 @@ class App extends Component {
 
 
     componentDidMount() {
-        fetch('http://localhost:8082/contactInfo')
+        fetch('http://192.168.1.148:8082/contactInfo')
             .then(res => res.json())
             .then((data) => {
                 this.setState({ contacts: data })
             })
             .catch(console.log);
 
-        fetch('http://localhost:8082/education/EN')
+        fetch('http://192.168.1.148:8082/education/EN')
             .then(res => res.json())
             .then((data) => {
                 this.setState({ education: data })
