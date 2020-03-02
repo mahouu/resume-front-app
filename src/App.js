@@ -212,7 +212,7 @@ class App extends Component {
             })
             .catch(console.log);
 
-        fetch('http://192.168.148:8082/education/EN')
+        fetch('http://192.168.1.148:8082/education/EN')
             .then(res => res.json())
             .then((data) => {
                 this.setState({ education: data })
