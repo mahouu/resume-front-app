@@ -100,132 +100,8 @@ class App extends Component {
     <section class="section">
       <header>
         <h2 class="section-title">Education <span class="item-count">(3)</span></h2>
-      </header>
-    
-      <section id="education">
-        <section class="education-item">
-          <header>
+      </header>      
           <Education education={this.state.education} />
-            <div class="header-left">
-              <div class="studyType">
-                Bachelor
-              </div>
-              <div class="area">
-                Technology
-              </div>
-            </div>
-            <div class="date">
-              <span class="startDate">
-              1997
-              </span>
-              <span class="endDate">
-              - 2000
-              </span>
-            </div>
-          </header>
-    
-    
-          <ul class="courses">
-            <li>Analist - programmer</li>
-          </ul>
-    
-          <div class="item">
-          </div>
-        </section>
-        <section class="education-item">
-          <header>
-            <div class="header-left">
-              <div class="studyType">
-                Independient course.
-              </div>
-              <div class="area">
-                Software develop.
-              </div>
-              <div class="institution">
-                Coursera Inc.
-              </div>
-            </div>
-            <div class="date">
-              <span class="startDate">
-              2015
-              </span>
-              <span class="endDate">
-              - 2015
-              </span>
-            </div>
-          </header>
-    
-    
-          <ul class="courses">
-            <li>An Introduction to Interactive Programming in Python (Part 1)</li>
-          </ul>
-    
-          <div class="item">
-          </div>
-        </section>
-        <section class="education-item">
-          <header>
-            <div class="header-left">
-              <div class="studyType">
-                Certification
-              </div>
-              <div class="area">
-                Databases
-              </div>
-              <div class="institution">
-                Mongo
-              </div>
-            </div>
-            <div class="date">
-              <span class="startDate">
-              2013
-              </span>
-              <span class="endDate">
-              - 2013
-              </span>
-            </div>
-          </header>
-    
-    
-          <ul class="courses">
-            <li>M101J - Mongodb certification.</li>
-          </ul>
-    
-          <div class="item">
-          </div>
-        </section>
-      </section>
-    </section>
-    <section class="section">
-      <header>
-        <h2 class="section-title">Awards</h2>
-      </header>
-      <section id="awards">
-        <section class="award-item">
-            <input id="award-item-0" type="checkbox" class="toggle-item" checked="checked"/>
-            <label for="award-item-0"></label>
-    
-          <header>
-            <div class="header-left">
-              <div class="title">
-                Team of the month
-              </div>
-              <div class="awarder">
-                ---
-              </div>
-            </div>
-            <div class="date">
-              2015
-            </div>
-          </header>
-          
-          <div class="item">
-            <div class="summary">
-              <p></p><p>Best team in the hole company several times at lastminute.</p><p></p>
-            </div>
-          </div>
-        </section>
-      </section>
     </section>
     <section class="section">
       <header>
@@ -336,7 +212,7 @@ class App extends Component {
             })
             .catch(console.log);
 
-        fetch('http://192.168.1.148:8082/education/EN')
+        fetch('http://192.168.148:8082/education/EN')
             .then(res => res.json())
             .then((data) => {
                 this.setState({ education: data })
