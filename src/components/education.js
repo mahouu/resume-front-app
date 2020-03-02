@@ -7,17 +7,42 @@ const Education = ({education}) => {
         const items = [];
 
         for (const [value] of education.educationInfo.entries()) {
-            items.push(<div className="card">
-                    <div className="card-body">
-                        <h5 className="card-title">Language: {education.educationInfo[value].languageView}</h5>
-                        <h5 className="card-title">Date: {education.educationInfo[value].dateView}</h5>
-                        <h5 className="card-title">Title: {education.educationInfo[value].titleView}</h5>
-                        <h5 className="card-title">SubTitle: {education.educationInfo[value].subTitleView}</h5>
-                        <h5 className="card-title">Description: {education.educationInfo[value].descriptionView}</h5></div></div>);
+            items.push(
+<section class="education-item">
+          <header>
+          
+            <div class="header-left">
+              <div class="studyType">
+                {education.educationInfo[value].titleView}
+              </div>
+              <div class="area">
+                
+              </div>
+              <div class="institution">
+                {education.educationInfo[value].subTitleView}
+              </div>
+            </div>
+            <div class="date">
+              <span class="startDate">
+              {education.educationInfo[value].dateView}
+              </span>
+              <span class="endDate">
+              </span>
+            </div>
+          </header>
+    
+    
+          <ul class="courses">
+            <li>{education.educationInfo[value].descriptionView}</li>
+          </ul>
+    
+          <div class="item">
+          </div>
+        </section>);
         }
-        return (<div><center><h1>Education</h1></center> 
+        return (<section id="education"> 
             {items}
-        </div>);                   
+        </section>);                   
     }else{
         return (<div>Loading education data...</div>);
     }
