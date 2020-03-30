@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Contacts from './components/contacts';
 import Education from './components/education';
+import Experience from './components/experience';
 
 
 class App extends Component {
@@ -62,6 +63,12 @@ class App extends Component {
             </div>
         </section>
     </section>
+
+{/* <!-- Experience --> */}
+
+<Experience experience={this.state.experience} />
+
+{/*  <!-- end experience --> */}
     <section class="section">
       <header>
         <h2 class="section-title">Work Experience <span class="item-count">(1)</span></h2>
@@ -205,7 +212,7 @@ class App extends Component {
 
 
     componentDidMount() {
-        fetch('http://192.168.1.148:8082/contactInfo')
+         fetch('http://192.168.1.148:8082/contactInfo')
             .then(res => res.json())
             .then((data) => {
                 this.setState({ contacts: data })
@@ -216,6 +223,12 @@ class App extends Component {
             .then(res => res.json())
             .then((data) => {
                 this.setState({ education: data })
+            })
+            .catch(console.log);
+        fetch('http://192.168.1.148:8082/experience/EN')
+            .then(res => res.json())
+            .then((data) => {
+                this.setState({ experience: data })
             })
             .catch(console.log);
     }
