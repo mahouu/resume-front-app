@@ -63,47 +63,9 @@ class App extends Component {
             </div>
         </section>
     </section>
-
-{/* <!-- Experience --> */}
-
-<Experience experience={this.state.experience} />
-
-{/*  <!-- end experience --> */}
-    <section class="section">
-      <header>
-        <h2 class="section-title">Work Experience <span class="item-count">(1)</span></h2>
-      </header>
     
-      <section id="work">
-        <section class="work-item">
-    
-            <input id="work-item-0" type="checkbox" class="toggle-item" checked="checked"/>
-            <label for="work-item-0"></label>
-    
-                <header>
-                    <div class="position">Software developer</div>
-                    <div class="company">LastMinute.com </div>
-                    <div class="date">
-                      <span class="startDate">December 2013</span> 
-                        <span class="endDate">- November 2017</span> 
-                    </div>
-                </header>
-                
-            <span class="website">
-                <a target="_blank" href="http://www.lastminute.com/">http://www.lastminute.com/</a>
-            </span>         <div class="item" id="work-item">
-            <div class="summary">
-              <p></p><p>Software developer at many teams in to many projects, such as Cruises, Hotels, SEO (flights and hotels), transfers, and vacational package. In some cases Leading some of those team for a few months.</p><p></p>
-            </div>
-            <ul class="highlights">
-                <li><p>Always creating a good mood into the team.</p></li>
-                <li><p>Always looking for a new ways of developing products.</p></li>
-                <li><p>Learning every month new libraries / technologies</p></li>
-            </ul>
-            </div>
-        </section>
-      </section>
-    </section>
+    <Experience experience={this.state.experience} />
+
     <section class="section">
       <header>
         <h2 class="section-title">Education <span class="item-count">(3)</span></h2>
@@ -212,20 +174,20 @@ class App extends Component {
 
 
     componentDidMount() {
-         fetch('http://192.168.1.148:8082/contactInfo')
+         fetch('http://192.168.1.66:8082/contactInfo')
             .then(res => res.json())
             .then((data) => {
                 this.setState({ contacts: data })
             })
             .catch(console.log);
 
-        fetch('http://192.168.1.148:8082/education/EN')
+        fetch('http://192.168.1.66:8082/education/EN')
             .then(res => res.json())
             .then((data) => {
                 this.setState({ education: data })
             })
             .catch(console.log);
-        fetch('http://192.168.1.148:8082/experience/EN')
+        fetch('http://192.168.1.66:8082/experience/EN')
             .then(res => res.json())
             .then((data) => {
                 this.setState({ experience: data })

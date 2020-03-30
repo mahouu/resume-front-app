@@ -7,47 +7,52 @@ const Experience = ({experience}) => {
         const items = [];
 
         for (const [value] of experience.experienceInfoViews.entries()) {
+
+            const tasks = experience.experienceInfoViews[value].tasksView;
+            const tasksFormated = [];
+            for (const [index, value] of tasks.entries()) {
+              tasksFormated.push(<li><p>{value.description}</p></li>)
+            }
+
+
             items.push(
-          <section class="education-item">
-          <header>
-          
-            <div class="header-left">
-              <div class="studyType">
-                {experience.experienceInfoViews[value].titleView}
-              </div>
-              <div class="area">
+          <section class="section">
+            <header>
+              <h2 class="section-title">Work Experience <span class="item-count">(1)</span></h2>
+            </header>
+    
+            <section id="work">
+              <section class="work-item">
+    
+              <input id="work-item-0" type="checkbox" class="toggle-item" checked="checked"/>
+              <label for="work-item-0"></label>
+    
+              <header>
+                <div class="position">{experience.experienceInfoViews[value].titleView}</div>
+                <div class="company">{experience.experienceInfoViews[value].companyView} </div>
+                <div class="date">
+                  <span class="startDate">{experience.experienceInfoViews[value].startDateView}</span> 
+                  <span class="endDate">- {experience.experienceInfoViews[value].endDateView}</span> 
+                </div>
+              </header>
                 
+              <span class="website">
+                <a target="_blank" href="{experience.experienceInfoViews[value].urlView}">{experience.experienceInfoViews[value].urlView}</a>
+              </span>         
+              <div class="item" id="work-item">
+                <div class="summary">
+                  <p></p>
+                  <p>{experience.experienceInfoViews[value].roleDescriptionView}</p>
+                  <p></p>
+                </div>
+                <ul class="highlights">
+                  {tasksFormated}
+                </ul>
               </div>
-              <div class="institution">
-                {experience.experienceInfoViews[value].companyView}
-              </div>
-            </div>
-            <div class="date">
-              <span class="startDate">
-              {experience.experienceInfoViews[value].urlView}
-              </span>
-              <span class="endDate">
-              </span>
-            </div>
-            <div>
-              Role description {experience.experienceInfoViews[value].roleDescriptionView}
-            </div>
-            <div>
-              startDateView {experience.experienceInfoViews[value].startDateView}
-            </div>
-            <div>
-              endDateView {experience.experienceInfoViews[value].endDateView}
-            </div>
-          </header>
-    
-    
-          <ul class="courses">
-            <li>{experience.experienceInfoViews[value].descriptionView}</li>
-          </ul>
-    
-          <div class="item">
-          </div>
-        </section>);
+            </section>
+          </section>
+        </section>
+          );
         }
         return (<section id="experience"> 
             {items}
