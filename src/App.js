@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Contacts from './components/contacts';
 import Education from './components/education';
 import Experience from './components/experience';
+import Skill from './components/skill';
 
 
 class App extends Component {
@@ -65,6 +66,8 @@ class App extends Component {
     </section>
     
     <Experience experience={this.state.experience} />
+    <Skill skill={this.state.skill} />
+
 
     <section class="section">
       <header>
@@ -191,6 +194,12 @@ class App extends Component {
             .then(res => res.json())
             .then((data) => {
                 this.setState({ experience: data })
+            })
+            .catch(console.log);
+        fetch('http://192.168.1.66:8082/skill/EN')
+            .then(res => res.json())
+            .then((data) => {
+                this.setState({ skill: data })
             })
             .catch(console.log);
     }
