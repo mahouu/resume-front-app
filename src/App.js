@@ -32,49 +32,19 @@ class App extends Component {
     <div>
              
             </div>
-    <section class="section margin1">
-        <header>
-            <h2 class="section-title">Skills</h2>
-        </header>
-        <section id="skills">
-            <div class="item">
-                <h3 class="name">
-                    Web Development
-                </h3>
-                 
-                <div class="level master">
-                    <em>Master</em>
-                    <div class="bar"></div>
-                </div>
-                <ul class="keywords">
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>Javascript</li>
-                    <li>Java</li>
-                    <li>Angular</li>
-                    <li>ES6</li>
-                    <li>Spring</li>
-                    <li>JPA</li>
-                    <li>Mongo</li>
-                    <li>Rest</li>
-                    <li>Microservices</li>
-                    <li>Docker</li>
-                    <li>Kubernetes</li>
-                </ul>
-            </div>
-        </section>
-    </section>
     
-    <Experience experience={this.state.experience} />
+    
     <Skill skill={this.state.skill} />
-
-
+       
+    <Experience experience={this.state.experience} />
+    
     <section class="section">
       <header>
         <h2 class="section-title">Education <span class="item-count">(3)</span></h2>
       </header>      
           <Education education={this.state.education} />
     </section>
+
     <section class="section">
       <header>
         <h2 class="section-title">Publications</h2>
