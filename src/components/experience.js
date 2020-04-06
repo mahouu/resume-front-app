@@ -16,10 +16,7 @@ const Experience = ({experience}) => {
 
 
             items.push(
-          <section class="section">
-            <header>
-              <h2 class="section-title">Work Experience <span class="item-count">(1)</span></h2>
-            </header>
+          
     
             <section id="work">
               <section class="work-item">
@@ -51,12 +48,16 @@ const Experience = ({experience}) => {
               </div>
             </section>
           </section>
-        </section>
           );
         }
         return (<section id="experience"> 
+          <section class="section">
+            <header>
+              <h2 class="section-title">Work Experience <span class="item-count">(12)</span></h2>
+            </header>
             {items}
-        </section>);                   
+        </section>
+                </section>);                   
     }else{
         return (<div>Loading experience data...</div>);
     }

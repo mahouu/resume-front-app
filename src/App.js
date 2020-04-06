@@ -15,6 +15,7 @@ class App extends Component {
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
   <title>Mauricio Miralles</title>
   <link rel="stylesheet" href="./font-awesome.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
   <style id="holderjs-style" type="text/css"/>
 </head>
   <body class=" __plain_text_READY__">
@@ -35,15 +36,17 @@ class App extends Component {
     
     
     <Skill skill={this.state.skill} />
-       
-    <Experience experience={this.state.experience} />
-    
+
     <section class="section">
       <header>
         <h2 class="section-title">Education <span class="item-count">(3)</span></h2>
       </header>      
           <Education education={this.state.education} />
     </section>
+       
+    <Experience experience={this.state.experience} />
+    
+    
 
     <section class="section">
       <header>
@@ -91,11 +94,23 @@ class App extends Component {
         </div>
       </section>
     </section>
+    <section class="section">
+      <header>
+        <h2 class="section-title">One more thing</h2>
+      </header>
+      <section id="references">
+        <div class="item">
+          <blockquote class="reference">
+            “ Technologies without any doubt, I take several meetups about coding or related like Madrid JUG, but also photography, I ́ve been working for 4 years as sport photopress, for me is my other passion you can take a look at https://www.flickr.com/photos/mahouu. In some cases I play guitar and piano and spend some time reading (tech and non tech eBooks). Actually I have a subscription to safari books, and waiting to attend in September to the codemotion Madrid 2019 and JaxLondon 2019.
+Actually I’́ve been working (pet project) on my online CV (​www.mauriciomiralles.es​) is in beta, and it ́s pending of the code review of some co-workers in order to upload the code to a public git repository, at this moment is offline due the raspberry that I use for that purpose is in a box in Madrid waiting for me to carry it to London. ”
+          </blockquote>
+        </div>
+      </section>
+    </section>
     <section class="section margin1">
       <header>
         <h2 class="section-title">Interests</h2>
       </header>
-      <section id="interests">
         <div class="item">
           <h3 class="name">
             Photography
@@ -117,7 +132,6 @@ class App extends Component {
           </ul>
         </div>
       </section>
-    </section>
     <section class="section">
       <header>
         <h2 class="section-title">References</h2>
